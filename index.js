@@ -9,7 +9,7 @@ const https = require("https");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.listen(3000,function(){console.log("Listening to port 3000, BIIIIITCH");});
+app.listen(process.env.PORT,function(){console.log("Listening to port 3000, BIIIIITCH");});
 app.get("/",function(req,res){
   res.sendFile(__dirname+"/index.html");
 });
